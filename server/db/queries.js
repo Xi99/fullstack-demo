@@ -5,7 +5,7 @@ const pool = new Pool({
 });
 
 const sendBugs = () => {
-  pool.query("SELECT * FROM bug").then(res => res.rows);
+  return pool.query("SELECT * FROM bug").then(res => res.rows);
 };
 
 module.exports = {

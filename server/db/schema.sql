@@ -11,4 +11,4 @@ CREATE TABLE bug (
     createdDate TEXT default (to_char(CURRENT_DATE, 'MM/DD/YYYY')),
     assignedTo TEXT,
     threatLevel TEXT
-)
+);
