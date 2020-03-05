@@ -1,12 +1,13 @@
 const express = require("express");
 const pool = require("./db/queries.js");
 const bp = require("body-parser");
+const cors = require("cors");
 
 const app = express();
 const port = 1212;
 
 app.use(bp.json());
-
+app.use(cors());
 app.get("/api/bugs", (req, res) => {
   pool.sendBugs().then(results => {
     res.send(results);

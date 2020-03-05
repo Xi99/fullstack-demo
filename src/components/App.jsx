@@ -12,12 +12,19 @@ class App extends React.Component {
     super();
     this.state = {
       filter: "None",
-      bugs: exampleData,
+      bugs: [],
       show: false
     };
     this.filterHandler = this.filterHandler.bind(this);
     this.showModal = this.showModal.bind(this);
+    // this.componentDidMount = this.componentDidMount.bind(this);
   }
+
+  // componentDidMount() {
+  //   fetch("http://localhost:1212/api/bugs")
+  //     .then(data => data.json())
+  //     .then(res => this.setState({ bugs: res }));
+  // }
 
   filterHandler(filter) {
     this.setState({ filter }, () =>
